@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<name>potnoodle</name>
+	<version>0.1.0</version>
+	<requirements>
+		<minimum_version>3.0.0</minimum_version>
+	</requirements>
+	<thumbnail>thumbnail.png</thumbnail>
+	<description>
+		<![CDATA[
+			Potnoodle is a frontend development quick start theme based on Chopstick. It aims to be as lightweight and semantic as possible.
+		]]>
+	</description>
+	<authors>
+		<author>
+			<name>Dieter Peirs</name>
+			<url>http://www.dieterpeirs.com</url>
+		</author>
+	</authors>
+	<metanavigation supported="false" />
+	<templates>
+		<template label="Default" path="core/layout/templates/default.tpl">
+			<positions>
+				<position name="main" />
+				<position name="aside" />
+			</positions>
+			<format>
+				[main,main,main,main],[aside,aside,aside,aside]
+			</format>
+		</template>
+		<template label="Home" path="core/layout/templates/home.tpl">
+			<positions>
+				<position name="hero" />
+				<position name="main" />
+				<position name="aside" />
+			</positions>
+			<format>
+				[hero,hero,hero,hero],[main,main,main,main],[aside,aside,aside,aside]
+			</format>
+		</template>
+	</templates>
+</theme>
