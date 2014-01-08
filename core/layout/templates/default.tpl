@@ -8,14 +8,18 @@
 	<![endif]-->
 
 	{* Header *}
-	{include:core/layout/templates/header.tpl}
+	<div class="holder header-holder">
+		<div class="row header-row">
+			{include:core/layout/templates/header.tpl}
+		</div>
+	</div>
 
 	{* Position: Main *}
+	{option:positionMain}
 	<div class="holder main-holder">
-		<section class="row main-row">
+		<div class="row main-row">
 			<div class="main">
 				<div class="inner">
-					{option:positionMain}
 					{iteration:positionMain}
 					{option:!positionMain.blockIsHTML}
 						{$positionMain.blockContent}
@@ -28,16 +32,16 @@
 					{/iteration:positionMain}
 				</div>
 			</div>
-		</section>
+		</div>
 	</div>
 	{/option:positionMain}
 
 	{* Position: Aside *}
+	{option:positionAside}
 	<div class="holder Aside-holder">
-		<section class="row Aside-row">
+		<div class="row Aside-row">
 			<div class="Aside">
 				<div class="inner">
-					{option:positionAside}
 					{iteration:positionAside}
 					{option:!positionAside.blockIsHTML}
 						{$positionAside.blockContent}
@@ -50,19 +54,25 @@
 					{/iteration:positionAside}
 				</div>
 			</div>
-		</section>
-	</div>
-	{/option:positionMain}
-
-	<noscript>
-		<div class="message notice">
-			<h4>{$lblEnableJavascript|ucfirst}</h4>
-			<p>{$msgEnableJavascript}</p>
 		</div>
-	</noscript>
+	</div>
+	{/option:positionAside}
 
 	{* Footer *}
-	{include:core/layout/templates/footer.tpl}
+	<div class="holder footer-holder">
+		<div class="row header-row">
+			{include:core/layout/templates/footer.tpl}
+		</div>
+	</div>
+
+	<noscript class="holder main-holder">
+		<div class="row main-row">
+			<div class="message notice">
+				<h4>{$lblEnableJavascript|ucfirst}</h4>
+				<p>{$msgEnableJavascript}</p>
+			</div>
+		</div>
+	</noscript>
 
 	{* General Javascript *}
 	{iteration:jsFiles}

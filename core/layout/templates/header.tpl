@@ -1,11 +1,17 @@
-<!-- @todo: add navigation, meta-navigation and language navigation -->
+<header class="header">
+	<div class="inner">
+		{* Brand *}
+		<h1 class="logo">{$siteTitle}</h1>
 
-<header class="holder header-holder">
-	<div class="row header-row">
-		<div class="header">
-			<div class="inner">
-				<h1 class="logo"><a href="/">{$siteTitle}</a></h1>
-			</div>
-		</div>
+		{* Navigation *}
+		<nav class="main-nav">
+			{$var|getnavigation:'page':0:1}
+		</nav>
+
+		{* Language *}
+		<nav class="language-nav">
+			{include:core/layout/templates/languages.tpl}
+		</nav>
 	</div>
 </header>
+
