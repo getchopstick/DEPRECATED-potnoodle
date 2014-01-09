@@ -25,9 +25,13 @@
 						<h1><a href="{$items.full_url}" title="{$items.title}">{$items.title}</a></h1>
 						<p>
 
-						<!-- AUTHOR -->
+							{* Written on *}
+							<span>
+								{$items.publish_on|date:{$dateFormatLong}:{$LANGUAGE}}
+							</span>,
 
-							<span>{$items.publish_on|date:{$dateFormatLong}:{$LANGUAGE}}</span>, {option:items.authors}{$lblBy}
+							{* Written by *}
+							{option:items.authors}{$lblBy}
 								{iteration:items.authors}
 									{option:items.authors.is_active}
 										<a href="{$var|geturlforblock:'team':'detail'}/{$items.authors.url}">{$items.authors.id|usersetting:'name'} {$items.authors.id|usersetting:'surname'}</a>,
@@ -38,13 +42,13 @@
 								{/iteration:items.authors}
 							{/option:items.authors}
 
-						<!-- CATEGORIES -->
 
-							<a href="{$items.category_url}" title="{$items.category_title}">
+							{* Category *}
+							<a href="{$items.category_full_url}" title="{$items.category_title}">
 							{$items.category_title}</a>,
 
-						<!-- COMMENTS -->
 
+							{* Comments *}
 							{option:!items.comments}
 								<a href="{$items.full_url}#{$actComment}" style="background-color: #{$items.dominant_color}">
 									{$msgBlogNoComments}
