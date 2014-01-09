@@ -23,11 +23,11 @@
 			<article>
 					<header>
 						<h1><a href="{$items.full_url}" title="{$items.title}">{$items.title}</a></h1>
-						<p class="date">
+						<p>
 
 						<!-- AUTHOR -->
 
-							<span class="uppercased">{$items.publish_on|date:{$dateFormatLong}:{$LANGUAGE}}</span>, {option:items.authors}{$lblBy}
+							<span>{$items.publish_on|date:{$dateFormatLong}:{$LANGUAGE}}</span>, {option:items.authors}{$lblBy}
 								{iteration:items.authors}
 									{option:items.authors.is_active}
 										<a href="{$var|geturlforblock:'team':'detail'}/{$items.authors.url}">{$items.authors.id|usersetting:'name'} {$items.authors.id|usersetting:'surname'}</a>,
@@ -46,19 +46,19 @@
 						<!-- COMMENTS -->
 
 							{option:!items.comments}
-								<a class="commentLink" href="{$items.full_url}#{$actComment}" style="background-color: #{$items.dominant_color}">
+								<a href="{$items.full_url}#{$actComment}" style="background-color: #{$items.dominant_color}">
 									{$msgBlogNoComments}
 								</a>
 							{/option:!items.comments}
 
 							{option:items.comments}
 								{option:items.comments_multiple}
-									<a class="commentCountLink" href="{$items.full_url}#{$actComments}" style="background-color: #{$items.dominant_color}">
+									<a  href="{$items.full_url}#{$actComments}" style="background-color: #{$items.dominant_color}">
 										{$items.comments_count} {$msgBlogNumberOfComments}
 									</a>
 								{/option:items.comments_multiple}
 								{option:!items.comments_multiple}
-									<a class="commentCountLink" href="{$items.full_url}#{$actComments}" style="background-color: #{$items.dominant_color}">
+									<a href="{$items.full_url}#{$actComments}" style="background-color: #{$items.dominant_color}">
 										{$msgBlogOneComment}
 									</a>
 								{/option:!items.comments_multiple}
