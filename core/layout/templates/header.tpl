@@ -1,7 +1,9 @@
 <header class="header">
 	<div class="inner">
 		{* Brand *}
-		<h1 class="logo">{$siteTitle}</h1>
+		<a href="/">
+			<h1 class="logo">{$siteTitle}</h1>
+		</a>
 
 		{* Navigation *}
 		<nav class="main-nav">
