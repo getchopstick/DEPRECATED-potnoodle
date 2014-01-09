@@ -9,28 +9,26 @@
 
 	{* Header *}
 	<div class="holder header-holder">
-		<div class="row header-row">
+		<div class="row">
 			{include:core/layout/templates/header.tpl}
 		</div>
 	</div>
 
 	{* Position: Main *}
 	{option:positionMain}
-	<div class="holder main-holder">
-		<div class="row main-row">
-			<div class="main">
-				<div class="inner">
-					{iteration:positionMain}
-					{option:!positionMain.blockIsHTML}
+	<div class="holder">
+		<div class="row">
+			<div class="inner">
+				{iteration:positionMain}
+				{option:!positionMain.blockIsHTML}
+					{$positionMain.blockContent}
+				{/option:!positionMain.blockIsHTML}
+				{option:positionMain.blockIsHTML}
+					<article>
 						{$positionMain.blockContent}
-					{/option:!positionMain.blockIsHTML}
-					{option:positionMain.blockIsHTML}
-						<article>
-							{$positionMain.blockContent}
-						</article>
-					{/option:positionMain.blockIsHTML}
-					{/iteration:positionMain}
-				</div>
+					</article>
+				{/option:positionMain.blockIsHTML}
+				{/iteration:positionMain}
 			</div>
 		</div>
 	</div>
@@ -38,36 +36,32 @@
 
 	{* Position: Aside *}
 	{option:positionAside}
-	<div class="holder Aside-holder">
-		<div class="row Aside-row">
-			<div class="Aside">
-				<div class="inner">
-					{iteration:positionAside}
-					{option:!positionAside.blockIsHTML}
-						{$positionAside.blockContent}
-					{/option:!positionAside.blockIsHTML}
-					{option:positionAside.blockIsHTML}
-						<article>
-							{$positionAside.blockContent}
-						</article>
-					{/option:positionAside.blockIsHTML}
-					{/iteration:positionAside}
-				</div>
-			</div>
+	<div class="holder">
+		<div class="row">
+			{iteration:positionAside}
+			{option:!positionAside.blockIsHTML}
+				{$positionAside.blockContent}
+			{/option:!positionAside.blockIsHTML}
+			{option:positionAside.blockIsHTML}
+				<article>
+					{$positionAside.blockContent}
+				</article>
+			{/option:positionAside.blockIsHTML}
+			{/iteration:positionAside}
 		</div>
 	</div>
 	{/option:positionAside}
 
 	{* Footer *}
 	<div class="holder footer-holder">
-		<div class="row header-row">
+		<div class="row">
 			{include:core/layout/templates/footer.tpl}
 		</div>
 	</div>
 
-	<noscript class="holder main-holder">
-		<div class="row main-row">
-			<div class="message notice">
+	<noscript class="holder">
+		<div class="row">
+			<div class="alert-box notice">
 				<h4>{$lblEnableJavascript|ucfirst}</h4>
 				<p>{$msgEnableJavascript}</p>
 			</div>
