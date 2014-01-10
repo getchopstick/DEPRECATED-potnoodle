@@ -8,10 +8,8 @@
 		{* Navigation *}
 		<nav class="main-nav">
 			{$var|getnavigation:'page':0:1}
-		</nav>
 
-		{* Language *}
-		<nav class="language-nav">
+			{* Language *}
 			{include:core/layout/templates/languages.tpl}
 		</nav>
 	</div>
