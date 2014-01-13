@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Fork CMS</title>
 <style>
-	body { background-color:#ebf3f9 }
+	body { background-color:#cccccc }
 	h2 {font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; color: #000000; margin: 12px 0 12px 0; padding: 0; text-align: left;}
 	h3 {font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; color: #000000; margin: 12px 0 6px 0; padding: 0; text-align: left;}
 	h4 {font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; color: #000000; margin: 0 0 6px 0; padding: 0; text-align: left;}
@@ -16,9 +16,9 @@
 	img {border: 0; display: block;}
 </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #CCCCCC">
+<body style="margin: 0; padding: 0; background-color: #cccccc">
 <style>
-	body { background-color:#ebf3f9 }
+	body { background-color:#cccccc }
 	h2 {font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; color: #000000; margin: 12px 0 12px 0; padding: 0; text-align: left;}
 	h3 {font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; color: #000000; margin: 12px 0 6px 0; padding: 0; text-align: left;}
 	h4 {font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; color: #000000; margin: 0 0 6px 0; padding: 0; text-align: left;}
@@ -29,7 +29,7 @@
 	small a {color: #7f7f7f;}
 	img {border: 0; display: block;}
 </style>
-	<table border="0" cellpadding="0" width="100%" style="margin:0; padding:0; background-color: #CCCCCC">
+	<table border="0" cellpadding="0" width="100%" style="margin:0; padding:0; background-color: #cccccc">
 		<tr>
 			<td width="100%" align="center" valign="top">
 				<table width="580" cellpadding="0" cellspacing="0" border="0">
@@ -48,14 +48,14 @@
 									<td width="24">
 									</td>
 									<td width="532">
-										<h2>Fork CMS: {$msgFaqOwnQuestionSubject|sprintf:'{$name}'}</h2>
+										<h2>{$SITE_TITLE}: {$msgFormBuilderSubject|sprintf:{$name}}</h2>
 										<h3>{$lblSenderInformation|ucfirst}</h3>
 										<p><strong>{$lblSentOn|ucfirst}:</strong><br /> {$sentOn|date:{$dateFormatLong}:{$LANGUAGE}}</p>
 
 										<h3>{$lblContent|ucfirst}</h3>
-										<p><strong>{$lblName|ucfirst}:</strong><br /> {$name}</p>
-										<p><strong>{$lblEmail|ucfirst}:</strong><br /> {$email}</p>
-										<p><strong>{$lblQuestion|ucfirst}:</strong><br /> {$message}</p>
+										{iteration:fields}
+											<p><strong>{$fields.label}:</strong><br /> {$fields.value}</p>
+										{/iteration:fields}
 									</td>
 									<td width="24">
 									</td>
