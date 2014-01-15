@@ -8,11 +8,7 @@
 	<![endif]-->
 
 	{* Header *}
-	<div class="holder header-holder">
-		<div class="row">
-			{include:core/layout/templates/header.tpl}
-		</div>
-	</div>
+	{include:core/layout/templates/header.tpl}
 
 	{* Position: Main *}
 	{option:positionMain}
