@@ -8,11 +8,7 @@
 	<![endif]-->
 
 	{* Header *}
-	<div class="holder header-holder">
-		<div class="row">
-			{include:core/layout/templates/header.tpl}
-		</div>
-	</div>
+	{include:core/layout/templates/header.tpl}
 
 	{* Position: Main *}
 	{option:positionMain}
@@ -53,30 +49,6 @@
 	{/option:positionAside}
 
 	{* Footer *}
-	<div class="holder footer-holder">
-		<div class="row">
-			{include:core/layout/templates/footer.tpl}
-		</div>
-	</div>
-
-	<noscript class="holder">
-		<div class="row">
-			<div class="alert-box notice">
-				<h4>{$lblEnableJavascript|ucfirst}</h4>
-				<p>{$msgEnableJavascript}</p>
-			</div>
-		</div>
-	</noscript>
-
-	{* General Javascript *}
-	{iteration:jsFiles}
-		<script src="{$jsFiles.file}"></script>
-	{/iteration:jsFiles}
-
-	{* Theme specific Javascript *}
-	<script src="{$THEME_URL}/core/js/theme.js"></script>
-
-	{* Site wide HTML *}
-	{$siteHTMLFooter}
+	{include:core/layout/templates/footer.tpl}
 </body>
 </html>
