@@ -11,19 +11,17 @@
 		{/option:!searchResults}
 		{option:searchResults}
 			{iteration:searchResults}
-				<div>
-					<header>
-						<h3>
-							<a href="{$searchResults.full_url}" title="{$searchResults.title}">
-								{$searchResults.title}
-							</a>
-						</h3>
-					</header>
-					<div>
-						{option:!searchResults.introduction}{$searchResults.text|truncate:200}{/option:!searchResults.introduction}
-						{option:searchResults.introduction}{$searchResults.introduction}{/option:searchResults.introduction}
-					</div>
-				</div>
+			<article>
+				<header>
+					<h2>
+						<a href="{$searchResults.full_url}" title="{$searchResults.title}">
+							{$searchResults.title}
+						</a>
+					</h2>
+				</header>
+				{option:!searchResults.introduction}{$searchResults.text|truncate:200}{/option:!searchResults.introduction}
+				{option:searchResults.introduction}{$searchResults.introduction}{/option:searchResults.introduction}
+			</article>
 			{/iteration:searchResults}
 		{/option:searchResults}
 	</section>

@@ -11,10 +11,12 @@
 *}
 
 {option:widgetSubpages}
-	<section id="subpagesBlocks">
+	<section>
 		{iteration:widgetSubpages}
-			<h3><a href="{$widgetSubpages.full_url}" title="{$widgetSubpages.title}">{$widgetSubpages.title}</a></h3>
-			{$widgetSubpages.description}
+		<article>
+			<h2><a href="{$widgetSubpages.full_url}" title="{$widgetSubpages.title}">{$widgetSubpages.title}</a></h2>
+			<p>{$widgetSubpages.description}</p>
+		</article>
 		{/iteration:widgetSubpages}
 	</section>
 {/option:widgetSubpages}
