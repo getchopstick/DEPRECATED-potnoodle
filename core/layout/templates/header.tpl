@@ -20,6 +20,9 @@
 					{include:core/layout/templates/languages.tpl}
 				</nav>
 			{/option:languages}
+
+			{* Search *}
+			{$var|parsewidget:'search':'form'}
 		</div>
 	</div>
 </header>
