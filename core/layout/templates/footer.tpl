@@ -1,5 +1,3 @@
-<!-- @todo: add footer navigation -->
-
 <footer class="holder footer-holder">
 	<div class="row">
 		<div class="footer">
