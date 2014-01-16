@@ -10,43 +10,30 @@
 	{* Header *}
 	{include:core/layout/templates/header.tpl}
 
-	{* Position: Main *}
-	{option:positionMain}
-	<div class="holder">
+	<main id="main" class="holder main-holder" role="main">
 		<div class="row">
-			<div class="inner">
-				{iteration:positionMain}
-				{option:!positionMain.blockIsHTML}
-					{$positionMain.blockContent}
-				{/option:!positionMain.blockIsHTML}
-				{option:positionMain.blockIsHTML}
-					<article>
+			<div class="main">
+				{* Page title *}
+				{option:!hideContentTitle}
+					<header>
+						<h1>{$page.title}</h1>
+					</header>
+				{/option:!hideContentTitle}
+
+				{* Main position *}
+				{option:positionMain}
+					{iteration:positionMain}
+					{option:!positionMain.blockIsHTML}
 						{$positionMain.blockContent}
-					</article>
-				{/option:positionMain.blockIsHTML}
-				{/iteration:positionMain}
+					{/option:!positionMain.blockIsHTML}
+					{option:positionMain.blockIsHTML}
+						{$positionMain.blockContent}
+					{/option:positionMain.blockIsHTML}
+					{/iteration:positionMain}
+				{/option:positionMain}
 			</div>
 		</div>
-	</div>
-	{/option:positionMain}
-
-	{* Position: Aside *}
-	{option:positionAside}
-	<div class="holder">
-		<div class="row">
-			{iteration:positionAside}
-			{option:!positionAside.blockIsHTML}
-				{$positionAside.blockContent}
-			{/option:!positionAside.blockIsHTML}
-			{option:positionAside.blockIsHTML}
-				<article>
-					{$positionAside.blockContent}
-				</article>
-			{/option:positionAside.blockIsHTML}
-			{/iteration:positionAside}
-		</div>
-	</div>
-	{/option:positionAside}
+	</main>
 
 	{* Footer *}
 	{include:core/layout/templates/footer.tpl}

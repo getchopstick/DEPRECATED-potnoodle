@@ -22,20 +22,9 @@
 		<template label="Default" path="core/layout/templates/default.tpl">
 			<positions>
 				<position name="main" />
-				<position name="aside" />
 			</positions>
 			<format>
-				[main,main,main,main],[aside,aside,aside,aside]
-			</format>
-		</template>
-		<template label="Home" path="core/layout/templates/home.tpl">
-			<positions>
-				<position name="hero" />
-				<position name="main" />
-				<position name="aside" />
-			</positions>
-			<format>
-				[hero,hero,hero,hero],[main,main,main,main],[aside,aside,aside,aside]
+				[main]
 			</format>
 		</template>
 	</templates>
