@@ -1,8 +1,16 @@
 <header class="holder header-holder">
 	<div class="row header-row">
 		<div class="header">
-			{* Brand *}
-			<h1><a href="/">{$siteTitle}</a></h1>
+
+			{* SEO logo: H1 for home, p for other pages *}
+
+			{option:isPage1}
+				<h1><a title="{$siteTitle}" href="/">{$siteTitle}</a></h1>
+			{/option:isPage1}
+
+			{option:!isPage1}
+				<p><a title="{$siteTitle}" href="/">{$siteTitle}</a></p>
+			{/option:!isPage1}
 
 			{* Navigation *}
 			<nav>
@@ -21,8 +29,9 @@
 				</nav>
 			{/option:languages}
 
-			{* Search *}
+			{* Search widget: so you don't have to make a position *}
 			{$var|parsewidget:'search':'form'}
+
 		</div>
 	</div>
 </header>
