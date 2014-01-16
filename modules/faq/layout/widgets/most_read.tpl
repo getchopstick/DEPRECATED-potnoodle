@@ -6,14 +6,12 @@
 {option:widgetFaqMostRead}
 	<section id="faqMostReadWidget">
 		<header>
-			<h3>{$lblMostReadQuestions|ucfirst}</h3>
+			<h2>{$lblMostReadQuestions|ucfirst}</h2>
 		</header>
-		<div>
-			<ul>
-				{iteration:widgetFaqMostRead}
-					<li><a href="{$widgetFaqMostRead.full_url}" title="{$widgetFaqMostRead.question}">{$widgetFaqMostRead.question}</a></li>
-				{/iteration:widgetFaqMostRead}
-			</ul>
-		</div>
+		<ul>
+			{iteration:widgetFaqMostRead}
+				<li><a href="{$widgetFaqMostRead.full_url}" title="{$widgetFaqMostRead.question}">{$widgetFaqMostRead.question}</a></li>
+			{/iteration:widgetFaqMostRead}
+		</ul>
 	</section>
 {/option:widgetFaqMostRead}

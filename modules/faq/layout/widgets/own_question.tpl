@@ -4,31 +4,29 @@
 *}
 
 {option:widgetFaqOwnQuestion}
-<section id="faqOwnQuestionForm">
+<section>
 	<header>
-		<h1 id="{$actOwnQuestion}">{$msgAskOwnQuestion|ucfirst}</h1>
+		<h2 id="{$actOwnQuestion}">{$msgAskOwnQuestion|ucfirst}</h2>
 	</header>
-	<div>
-		{option:errorSpam}<div class="alert-box error"><p>{$errOwnQuestionSpam}</p></div>{/option:errorSpam}
-		{option:success}<div class="alert-box success"><p>{$msgOwnQuestionSuccess}</p></div>{/option:success}
+	{option:errorSpam}<div class="alert-box error"><p>{$errOwnQuestionSpam}</p></div>{/option:errorSpam}
+	{option:success}<div class="alert-box success"><p>{$msgOwnQuestionSuccess}</p></div>{/option:success}
 
-		{form:own_question}
-			<p{option:txtNameError} class="errorArea"{/option:txtNameError}>
-				<label for="name">{$lblYourName|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
-				{$txtName} {$txtNameError}
-			</p>
-			<p{option:txtEmailError} class="errorArea"{/option:txtEmailError}>
-				<label for="email">{$lblYourEmail|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
-				{$txtEmail} {$txtEmailError}
-			</p>
-			<p class="bigInput{option:txtMessageError} errorArea{/option:txtMessageError}">
-				<label for="message">{$lblYourQuestion|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
-				{$txtMessage} {$txtMessageError}
-			</p>
-			<p>
-				<input type="submit" name="send" value="{$lblSend|ucfirst}" />
-			</p>
-		{/form:own_question}
-	</div>
+	{form:own_question}
+		<p{option:txtNameError} class="errorArea"{/option:txtNameError}>
+			<label for="name">{$lblYourName|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
+			{$txtName} {$txtNameError}
+		</p>
+		<p{option:txtEmailError} class="errorArea"{/option:txtEmailError}>
+			<label for="email">{$lblYourEmail|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
+			{$txtEmail} {$txtEmailError}
+		</p>
+		<p class="bigInput{option:txtMessageError} errorArea{/option:txtMessageError}">
+			<label for="message">{$lblYourQuestion|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
+			{$txtMessage} {$txtMessageError}
+		</p>
+		<p>
+			<input type="submit" name="send" value="{$lblSend|ucfirst}" />
+		</p>
+	{/form:own_question}
 </section>
 {/option:widgetFaqOwnQuestion}
