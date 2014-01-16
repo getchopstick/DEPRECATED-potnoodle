@@ -6,7 +6,7 @@
 {option:widgetBlogCategories}
 	<section id="blogCategoriesWidget">
 		<header>
-			<h1>{$lblCategories|ucfirst}</h1>
+			<h2>{$lblCategories|ucfirst}</h2>
 		</header>
 		<ul>
 			{iteration:widgetBlogCategories}

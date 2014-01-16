@@ -6,7 +6,7 @@
 {option:widgetBlogRecentComments}
 	<section>
 		<header>
-			<h1>{$lblRecentComments|ucfirst}</h1>
+			<h2>{$lblRecentComments|ucfirst}</h2>
 		</header>
 		{iteration:widgetBlogRecentComments}
 			<article>

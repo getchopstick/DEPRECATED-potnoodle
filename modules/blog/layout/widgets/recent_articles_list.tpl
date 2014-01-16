@@ -6,7 +6,7 @@
 {option:widgetBlogRecentArticlesList}
 	<section>
 		<header>
-			<h1>{$lblRecentArticles|ucfirst}</h1>
+			<h2>{$lblRecentArticles|ucfirst}</h2>
 		</header>
 		<ul>
 			{iteration:widgetBlogRecentArticlesList}

@@ -7,7 +7,7 @@
 	{option:widgetBlogArchive}
 		<section>
 			<header>
-				<h1>{$lblArchive|ucfirst}</h1>
+				<h2>{$lblArchive|ucfirst}</h2>
 			</header>
 			<ul>
 				{iteration:widgetBlogArchive}
