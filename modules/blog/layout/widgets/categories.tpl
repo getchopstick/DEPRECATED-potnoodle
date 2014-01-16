@@ -5,17 +5,17 @@
 
 {option:widgetBlogCategories}
 	<section id="blogCategoriesWidget">
-		<div>
-			<header>
-				<h1>{$lblCategories|ucfirst}</h1>
-			</header>
-			<div>
-				{iteration:widgetBlogCategories}
+		<header>
+			<h1>{$lblCategories|ucfirst}</h1>
+		</header>
+		<ul>
+			{iteration:widgetBlogCategories}
+				<li>
 					<a href="{$widgetBlogCategories.url}">
 						{$widgetBlogCategories.label}&nbsp;({$widgetBlogCategories.total})
-					</a> -
-				{/iteration:widgetBlogCategories}
-			</div>
-		</div>
+					</a>
+				</li>
+			{/iteration:widgetBlogCategories}
+		</ul>
 	</section>
 {/option:widgetBlogCategories}

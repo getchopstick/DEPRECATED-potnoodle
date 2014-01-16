@@ -4,17 +4,15 @@
 *}
 
 {option:widgetBlogRecentArticlesList}
-	<section id="blogRecentArticlesListWidget">
+	<section>
 		<header>
 			<h1>{$lblRecentArticles|ucfirst}</h1>
 		</header>
-		<div>
-			<ul>
-				{iteration:widgetBlogRecentArticlesList}
-					<li><a href="{$widgetBlogRecentArticlesList.full_url}" title="{$widgetBlogRecentArticlesList.title}">{$widgetBlogRecentArticlesList.title}</a></li>
-				{/iteration:widgetBlogRecentArticlesList}
-			</ul>
-		</div>
+		<ul>
+			{iteration:widgetBlogRecentArticlesList}
+				<li><a href="{$widgetBlogRecentArticlesList.full_url}" title="{$widgetBlogRecentArticlesList.title}">{$widgetBlogRecentArticlesList.title}</a></li>
+			{/iteration:widgetBlogRecentArticlesList}
+		</ul>
 		<footer>
 			<p>
 				<a href="{$var|geturlforblock:'blog'}">{$lblBlogArchive|ucfirst}</a>
