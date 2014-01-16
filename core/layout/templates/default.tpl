@@ -13,6 +13,8 @@
 	<main id="main" class="holder main-holder" role="main">
 		<div class="row">
 			<div class="main">
+				{include:core/layout/templates/breadcrumb.tpl}
+
 				{* Page title *}
 				{option:!hideContentTitle}
 					<header>
