@@ -19,11 +19,13 @@
 	</div>
 </footer>
 
-<noscript class="holder">
-	<div class="row">
-		<div class="alert-box notice">
-			<h4>{$lblEnableJavascript|ucfirst}</h4>
-			<p>{$msgEnableJavascript}</p>
+<noscript>
+	<div class="holder">
+		<div class="row">
+			<div class="alert-box notice">
+				<h4>{$lblEnableJavascript|ucfirst}</h4>
+				<p>{$msgEnableJavascript}</p>
+			</div>
 		</div>
 	</div>
 </noscript>
