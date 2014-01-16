@@ -5,7 +5,7 @@
 *}
 
 {option:searchTerm}
-	<section id="searchResults">
+	<section>
 		{option:!searchResults}
 			<p>{$msgSearchNoItems}</p>
 		{/option:!searchResults}

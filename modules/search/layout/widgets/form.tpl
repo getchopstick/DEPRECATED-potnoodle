@@ -1,4 +1,4 @@
-<section id="searchFormWidget">
+<section>
 	{form:search}
 		<p>
 			<label for="qWidget">{$lblSearchTerm|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>

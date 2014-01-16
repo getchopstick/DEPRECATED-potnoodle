@@ -4,7 +4,7 @@
 	- {$searchTerm}: the term that has been searched for
 *}
 
-<section id="searchIndex">
+<section>
 	<header>
 		<h1>{$lblSearch|ucfirst}</h1>
 	</header>
