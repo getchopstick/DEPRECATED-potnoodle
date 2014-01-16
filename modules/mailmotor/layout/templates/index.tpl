@@ -1,4 +1,4 @@
-<section id="mailmotorIndex">
+<section>
 	{option:dataGrid}
 		{$dataGrid}
 	{/option:dataGrid}

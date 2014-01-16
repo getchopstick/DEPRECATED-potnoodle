@@ -1,4 +1,4 @@
-<section id="subscribeIndex">
+<section>
 	{option:subscribeHasFormError}<div class="alert-box error"><p>{$errFormError}</p></div>{/option:subscribeHasFormError}
 	{option:subscribeHasError}<div class="message error"><p>{$errSubscribeFailed}</p></div>{/option:subscribeHasError}
 	{option:subscribeIsSuccess}<div class="message success"><p>{$msgSubscribeSuccess}</p></div>{/option:subscribeIsSuccess}

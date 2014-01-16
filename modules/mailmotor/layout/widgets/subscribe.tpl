@@ -1,4 +1,4 @@
-<section id="subscribeFormWidget">
+<section>
 	{form:subscribe}
 		<input type="hidden" name="form_token" id="formToken" value="{$formToken}" />
 		<p>

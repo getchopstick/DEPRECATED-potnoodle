@@ -1,4 +1,4 @@
-<section id="unsubscribeIndex">
+<section>
 	{option:unsubscribeHasFormError}<div class="message error"><p>{$errFormError}</p></div>{/option:unsubscribeHasFormError}
 	{option:unsubscribeHasError}<div class="message error"><p>{$errUnsubscribeFailed}</p></div>{/option:unsubscribeHasError}
 	{option:unsubscribeIsSuccess}<div class="message success"><p>{$msgUnsubscribeSuccess}</p></div>{/option:unsubscribeIsSuccess}
