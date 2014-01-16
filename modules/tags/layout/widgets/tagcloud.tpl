@@ -4,18 +4,16 @@
 *}
 
 {option:widgetTagsTagCloud}
-	<section id="tagCloudWidget">
-		<div>
-			<header>
-				<h1>{$lblTags|ucfirst}</h1>
-			</header>
-			<div>
-				{iteration:widgetTagsTagCloud}
-					<a href="{$widgetTagsTagCloud.url}">
-						{$widgetTagsTagCloud.name}&nbsp;({$widgetTagsTagCloud.number})
-					</a>
-				{/iteration:widgetTagsTagCloud}
-			</div>
-		</div>
+	<section>
+		<header>
+			<h1>{$lblTags|ucfirst}</h1>
+		</header>
+		<p>
+			{iteration:widgetTagsTagCloud}
+				<a href="{$widgetTagsTagCloud.url}">
+					{$widgetTagsTagCloud.name}&nbsp;({$widgetTagsTagCloud.number})
+				</a>
+			{/iteration:widgetTagsTagCloud}
+		</p>
 	</section>
 {/option:widgetTagsTagCloud}
