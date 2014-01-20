@@ -807,410 +807,25 @@ img {
   vertical-align: top;
   border: 0; }
 
-/* line 171, ../scss/theme/_base.scss */
-form {
-  padding: 0 0 0.875em; }
-
-/* line 176, ../scss/theme/_base.scss */
-legend,
-label {
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  font-size: 1em;
-  line-height: 1.75;
-  padding-top: 1.3125em;
-  padding-bottom: 0.4375em; }
-
-/* line 203, ../scss/theme/_base.scss */
-input[type="input"],
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="url"],
-input[type="number"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[name="field_country_code"],
-input[name="field_city_code"],
-input[name="field_phone_int"],
-select[multiple],
-textarea {
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid #dddddd;
-  color: #919191;
-  font-family: sans-serif;
-  margin: 0;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 0.15625em;
-  padding-right: 0.15625em;
-  font-size: 1em;
-  line-height: 1.3125;
-  padding-top: 0.4375em;
-  padding-bottom: 0.4375em;
-  height: 2.1875em; }
-  /* line 217, ../scss/theme/_base.scss */
-  input[type="input"]:focus,
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  input[type="tel"]:focus,
-  input[type="url"]:focus,
-  input[type="number"]:focus,
-  input[type="date"]:focus,
-  input[type="month"]:focus,
-  input[type="week"]:focus,
-  input[type="time"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus,
-  input[name="field_country_code"]:focus,
-  input[name="field_city_code"]:focus,
-  input[name="field_phone_int"]:focus,
-  select[multiple]:focus,
-  textarea:focus {
-    color: #444444;
-    outline-color: #dddddd;
-    border-color: #aaaaaa; }
-
-/* line 224, ../scss/theme/_base.scss */
-textarea {
-  height: auto; }
-
-/* line 230, ../scss/theme/_base.scss */
-::-webkit-input-placeholder {
-  font-family: sans-serif;
-  font-style: italic; }
-
-/* line 235, ../scss/theme/_base.scss */
-::-moz-placeholder {
-  font-family: sans-serif;
-  font-style: italic; }
-
-/* line 240, ../scss/theme/_base.scss */
-:-ms-input-placeholder {
-  font-family: sans-serif;
-  font-style: italic; }
-
-/* line 248, ../scss/theme/_base.scss */
-input[type="submit"],
-button {
-  padding-left: 0.3125em;
-  padding-right: 0.3125em;
-  font-size: 1em;
-  line-height: 1.3125;
-  padding-top: 0.4375em;
-  padding-bottom: 0.4375em;
-  height: 2.1875em;
-  border: 1px solid #0a69e7;
-  background-color: #0a69e7;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
-  color: #FFF; }
-  /* line 75, ../scss/shared/_ui.scss */
-  input[type="submit"]:hover, input[type="submit"]:focus,
-  button:hover,
-  button:focus {
-    border: 1px solid #2981f6;
-    background-color: #2981f6;
-    color: #FFF; }
-  /* line 85, ../scss/shared/_ui.scss */
-  input[type="submit"]:focus,
-  button:focus {
-    text-decoration: underline; }
-  /* line 89, ../scss/shared/_ui.scss */
-  input[type="submit"]:active,
-  button:active {
-    background-color: #2981f6;
-    box-shadow: none;
-    color: #FFF; }
-  /* line 99, ../scss/shared/_ui.scss */
-  input[type="submit"]:visited,
-  button:visited {
-    color: #FFF; }
-
-@media (min-width: 42.5em) {
-  /* line 274, ../scss/theme/_base.scss */
-  input[type="input"],
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="url"],
-  input[type="number"],
-  input[type="date"],
-  input[type="month"],
-  input[type="week"],
-  input[type="time"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[name="field_country_code"],
-  input[name="field_city_code"],
-  input[name="field_phone_int"],
-  select[multiple],
-  textarea {
-    padding-left: 0.15625em;
-    padding-right: 0.15625em;
-    font-size: 1em;
-    line-height: 1.3125;
-    padding-top: 0.875em;
-    padding-bottom: 0.875em;
-    height: 3.0625em; }
-
-  /* line 278, ../scss/theme/_base.scss */
-  textarea {
-    height: auto; }
-
-  /* line 283, ../scss/theme/_base.scss */
-  input[type="submit"],
-  button {
-    padding-left: 0.46875em;
-    padding-right: 0.46875em;
-    font-size: 1em;
-    line-height: 1.3125;
-    padding-top: 0.875em;
-    padding-bottom: 0.875em;
-    height: 3.0625em;
-    display: inline-block;
-    width: auto; } }
 @media (min-width: 71.25em) {
-  /* line 310, ../scss/theme/_base.scss */
-  input[type="input"],
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="url"],
-  input[type="number"],
-  input[type="date"],
-  input[type="month"],
-  input[type="week"],
-  input[type="time"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[name="field_country_code"],
-  input[name="field_city_code"],
-  input[name="field_phone_int"],
-  select[multiple],
-  textarea {
-    padding-left: 0.15625em;
-    padding-right: 0.15625em;
-    font-size: 1.414em;
-    line-height: 1.23762;
-    padding-top: 0.61881em;
-    padding-bottom: 0.61881em;
-    height: 2.47525em; }
-
-  /* line 314, ../scss/theme/_base.scss */
-  textarea {
-    height: auto; }
-
-  /* line 319, ../scss/theme/_base.scss */
-  input[type="submit"],
-  button {
-    padding-left: 0.625em;
-    padding-right: 0.625em;
-    font-size: 1.414em;
-    line-height: 1.23762;
-    padding-top: 0.61881em;
-    padding-bottom: 0.61881em;
-    height: 2.47525em; } }
-@media (min-width: 71.25em) {
-  /* line 331, ../scss/theme/_base.scss */
+  /* line 173, ../scss/theme/_base.scss */
   html {
     font-size: 112.5%; } }
-/* line 7, ../scss/theme/_forms.scss */
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+/* line 5, ../scss/theme/_forms.scss */
+form {
+  margin-bottom: 1.5em; }
 
 /* line 11, ../scss/theme/_forms.scss */
-html {
-  background-color: #444444;
-  -webkit-overflow-scrolling: touch;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  font: 400 100%/1.5 sans-serif; }
-
-/* line 19, ../scss/theme/_forms.scss */
-body {
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizelegibility;
-  color: #444444; }
-
-/* line 26, ../scss/theme/_forms.scss */
-::-moz-selection {
-  background-color: #444444;
-  color: #eaeaea;
-  text-shadow: none; }
-
-/* line 32, ../scss/theme/_forms.scss */
-::selection {
-  background-color: #444444;
-  color: #eaeaea;
-  text-shadow: none; }
-
-/* line 38, ../scss/theme/_forms.scss */
-hr {
-  border: 1px solid #dddddd;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 0 0 1.5em; }
-
-/* line 54, ../scss/theme/_forms.scss */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-family: sans-serif;
-  font-weight: 400;
-  text-rendering: optimizelegibility; }
-
-/* line 61, ../scss/theme/_forms.scss */
-h1 {
-  font-size: 2.82715em;
-  line-height: 1.238;
-  padding-top: 0.46425em;
-  padding-bottom: 0.46425em; }
-
-/* line 65, ../scss/theme/_forms.scss */
-h2 {
-  font-size: 1.9994em;
-  line-height: 1.3129;
-  padding-top: 0.65645em;
-  padding-bottom: 0.65645em; }
-
-/* line 69, ../scss/theme/_forms.scss */
-h3 {
-  font-size: 1.414em;
-  line-height: 1.54703;
-  padding-top: 0.92822em;
-  padding-bottom: 0.30941em; }
-
-/* line 75, ../scss/theme/_forms.scss */
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  font-size: 1em;
-  line-height: 1.75;
-  padding-top: 1.3125em;
-  padding-bottom: 0.4375em; }
-
-/* line 86, ../scss/theme/_forms.scss */
-p,
-ol,
-ul,
-dl,
-table,
-address,
-pre {
-  font-size: 1em;
-  line-height: 1.75;
-  padding-top: 0.4375em;
-  padding-bottom: 0.875em; }
-
-/* line 92, ../scss/theme/_forms.scss */
-ul,
-ol,
-blockquote {
-  padding-left: 1em; }
-
-/* line 96, ../scss/theme/_forms.scss */
-blockquote {
-  font-style: italic; }
-
-/* line 100, ../scss/theme/_forms.scss */
-table {
-  text-align: left;
-  width: 100%;
-  font-family: sans-serif;
-  border-spacing: 0;
-  border-collapse: collapse;
-  font-size: 0.875em;
-  line-height: 1.71429em;
-  margin-bottom: 3.42857em; }
-
-/* line 109, ../scss/theme/_forms.scss */
-caption {
-  font-family: sans-serif;
-  text-align: left;
-  border-bottom: 1px solid #c4c4c4;
-  font-weight: 700;
-  text-align: center;
-  padding-bottom: 0.75em;
-  margin-bottom: 0.75em; }
-
-/* line 120, ../scss/theme/_forms.scss */
-td,
-th {
-  padding: .25em 1em .25em 0;
-  border-bottom: 1px solid #f7f7f7; }
-
-/* line 125, ../scss/theme/_forms.scss */
-img {
-  max-width: 100%; }
-
-/* line 133, ../scss/theme/_forms.scss */
-a {
-  text-decoration: none;
-  color: #0a69e7;
-  transition: color .22s ease-in-out; }
-  /* line 138, ../scss/theme/_forms.scss */
-  a:visited {
-    color: #095ecf; }
-  /* line 142, ../scss/theme/_forms.scss */
-  a:hover {
-    text-decoration: underline;
-    color: #0853b6; }
-  /* line 147, ../scss/theme/_forms.scss */
-  a:focus {
-    outline: thin dotted;
-    color: #0853b6; }
-  /* line 153, ../scss/theme/_forms.scss */
-  a:hover, a:active {
-    outline: 0; }
-
-/* line 162, ../scss/theme/_forms.scss */
-img {
-  vertical-align: top;
-  border: 0; }
-
-/* line 171, ../scss/theme/_forms.scss */
-form {
-  padding: 0 0 0.875em; }
-
-/* line 176, ../scss/theme/_forms.scss */
 legend,
 label {
   display: block;
   width: 100%;
   cursor: pointer;
   font-size: 1em;
-  line-height: 1.75;
-  padding-top: 1.3125em;
-  padding-bottom: 0.4375em; }
+  line-height: 1.5em;
+  margin-bottom: 0.375em; }
 
-/* line 203, ../scss/theme/_forms.scss */
+/* line 38, ../scss/theme/_forms.scss */
 input[type="input"],
 input[type="text"],
 input[type="email"],
@@ -1250,7 +865,7 @@ textarea {
   padding-top: 0.4375em;
   padding-bottom: 0.4375em;
   height: 2.1875em; }
-  /* line 217, ../scss/theme/_forms.scss */
+  /* line 52, ../scss/theme/_forms.scss */
   input[type="input"]:focus,
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -1274,26 +889,26 @@ textarea {
     outline-color: #dddddd;
     border-color: #aaaaaa; }
 
-/* line 224, ../scss/theme/_forms.scss */
+/* line 59, ../scss/theme/_forms.scss */
 textarea {
   height: auto; }
 
-/* line 230, ../scss/theme/_forms.scss */
+/* line 65, ../scss/theme/_forms.scss */
 ::-webkit-input-placeholder {
   font-family: sans-serif;
   font-style: italic; }
 
-/* line 235, ../scss/theme/_forms.scss */
+/* line 70, ../scss/theme/_forms.scss */
 ::-moz-placeholder {
   font-family: sans-serif;
   font-style: italic; }
 
-/* line 240, ../scss/theme/_forms.scss */
+/* line 75, ../scss/theme/_forms.scss */
 :-ms-input-placeholder {
   font-family: sans-serif;
   font-style: italic; }
 
-/* line 248, ../scss/theme/_forms.scss */
+/* line 83, ../scss/theme/_forms.scss */
 input[type="submit"],
 button {
   padding-left: 0.3125em;
@@ -1329,98 +944,6 @@ button {
   button:visited {
     color: #FFF; }
 
-@media (min-width: 42.5em) {
-  /* line 274, ../scss/theme/_forms.scss */
-  input[type="input"],
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="url"],
-  input[type="number"],
-  input[type="date"],
-  input[type="month"],
-  input[type="week"],
-  input[type="time"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[name="field_country_code"],
-  input[name="field_city_code"],
-  input[name="field_phone_int"],
-  select[multiple],
-  textarea {
-    padding-left: 0.15625em;
-    padding-right: 0.15625em;
-    font-size: 1em;
-    line-height: 1.3125;
-    padding-top: 0.875em;
-    padding-bottom: 0.875em;
-    height: 3.0625em; }
-
-  /* line 278, ../scss/theme/_forms.scss */
-  textarea {
-    height: auto; }
-
-  /* line 283, ../scss/theme/_forms.scss */
-  input[type="submit"],
-  button {
-    padding-left: 0.46875em;
-    padding-right: 0.46875em;
-    font-size: 1em;
-    line-height: 1.3125;
-    padding-top: 0.875em;
-    padding-bottom: 0.875em;
-    height: 3.0625em;
-    display: inline-block;
-    width: auto; } }
-@media (min-width: 71.25em) {
-  /* line 310, ../scss/theme/_forms.scss */
-  input[type="input"],
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="url"],
-  input[type="number"],
-  input[type="date"],
-  input[type="month"],
-  input[type="week"],
-  input[type="time"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[name="field_country_code"],
-  input[name="field_city_code"],
-  input[name="field_phone_int"],
-  select[multiple],
-  textarea {
-    padding-left: 0.15625em;
-    padding-right: 0.15625em;
-    font-size: 1.414em;
-    line-height: 1.23762;
-    padding-top: 0.61881em;
-    padding-bottom: 0.61881em;
-    height: 2.47525em; }
-
-  /* line 314, ../scss/theme/_forms.scss */
-  textarea {
-    height: auto; }
-
-  /* line 319, ../scss/theme/_forms.scss */
-  input[type="submit"],
-  button {
-    padding-left: 0.625em;
-    padding-right: 0.625em;
-    font-size: 1.414em;
-    line-height: 1.23762;
-    padding-top: 0.61881em;
-    padding-bottom: 0.61881em;
-    height: 2.47525em; } }
-@media (min-width: 71.25em) {
-  /* line 331, ../scss/theme/_forms.scss */
-  html {
-    font-size: 112.5%; } }
 /* line 5, ../scss/theme/_frame.scss */
 .holder {
   background-color: white;
