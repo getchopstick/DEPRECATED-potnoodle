@@ -1,4 +1,4 @@
-[subtree "core/layout/scss"]
+[subtree "Core/Layout/Scss"]
 	url = git@github.com:wijs/chopstick.git
-	path = core/layout/scss
+	path = Core/Layout/Scss
 	branch = master
