@@ -1,0 +1,138 @@
+// Horizontal responsive navigation.
+// @include list-nav on <ul> or <ol>;
+// @include horizontal-nav on <ul> or <ol>;
+
+@mixin list-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@mixin horizontal-nav {
+	li, a {
+		display: block;
+		float: left;
+		zoom: 1;
+	}
+}
+
+// Calculate text-color based on background-color
+
+@mixin text-color($c1) {
+	// Calculations based on https://vimeo.com/60224584
+	@if (.2126*red($c1) + .7152*green($c1) + .0722*blue($c1))/255 <= .5 {
+		color: mix(#FFF,$c1,95%);
+	} @else {
+		color: mix(#000,$c1,70%);
+	}
+}
+
+// UI mixins.
+
+// Make a block with various properties
+// @include block-skin;
+@mixin block-skin($bgcolor: $gamma-ui-color, $fgcolor: $alpha-text-color, $block-radius: $radius, $block-border-width: $border-width, $block-border-style: $border-style) {
+
+	background-color: $bgcolor;
+	border-color: darken($bgcolor,100%-$contrast);
+	border-style: $border-style;
+
+	@if (su($block-radius) > 0) {
+		border-radius: $block-radius;
+	}
+
+	@if (su($block-border-width) > 0) {
+		border-width: $block-border-width;
+	}
+
+	@include text-color($bgcolor);
+
+}
+
+// Cross browser background opacity.
+@mixin background-opacity($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	background-color: transparent;
+	background-color: $rgba;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+	zoom: 1;
+}
+
+// Baseline mixins
+
+// Vertical padding based on the base line-height
+// @include padding-tb(#top, #bottom);
+
+@mixin padding-tb($top: 1, $bottom: 0) {
+	padding-top: $alpha-line-height * 1em * $top;
+	padding-bottom: $alpha-line-height * 1em * $bottom;
+}
+
+// Padding-bottom based on the base line-height
+// @include padding-bottom(#bottom),
+
+@mixin padding-bottom($bottom: 1) {
+	padding-bottom: $alpha-line-height * 1em * $bottom;
+}
+
+// Padding-top based on the base line-height
+// @include padding-top(#top);
+
+@mixin padding-top($top: 1) {
+	padding-top: $alpha-line-height * 1em * $top;
+}
+
+// Vertical margin based on the base line-height
+// @include margin-tb(#top, #bottom)
+
+@mixin margin-tb($top: 1, $bottom: 0) {
+	margin-top: $alpha-line-height * 1em * $top;
+	margin-bottom: $alpha-line-height * 1em * $bottom;
+}
+
+// Margin-bottom based on the base line-height
+// @include margin-bottom(#bottom);
+
+@mixin margin-bottom($bottom: 1) {
+	margin-bottom: $alpha-line-height * 1em * $bottom;
+}
+
+// Border-box polyfill helper.
+// @include border-box;
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// Progressive svg backgrounds with png fallback.
+// Requires modernizr class .svg.
+// @include svg-bg("path/file", ".extension", $delta-ui-color, 0 50%, no-repeat);
+
+@mixin mdrn-svg { .svg & { @content } }
+
+@mixin svg-bg($filename, $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat, $size: auto) {
+	background: $bg-color url($filename + $extension) $position $repeat;
+	background-size: $size;
+	@include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; background-size: $size; }
+}
+
+// Media query mixin.
+// @include mq(#point, #query1, #query2);
+@mixin mq($point, $query1: min, $query2: width) {
+	@media (#{$query1}-#{$query2}: $point) {
+		@content;
+	}
+}
+
+// Vertically center any object within its container. Works in IE9 and up.
+// @include vertical-center;
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
