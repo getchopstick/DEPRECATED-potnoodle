@@ -1,24 +1,3 @@
-/*
-	Patterns
-*/
-
-// Clearfix.
-// @extend %clearfix;
-
-%clearfix {
-	*zoom : 1;
-
-	&:before,
-	&:after {
-		display: table;
-		content : "";
-	}
-
-	&:after {
-		clear : both;
-	}
-}
-
 // Horizontal responsive navigation.
 // @include list-nav on <ul> or <ol>;
 // @include horizontal-nav on <ul> or <ol>;
@@ -42,36 +21,35 @@
 @mixin text-color($c1) {
 	// Calculations based on https://vimeo.com/60224584
 	@if (.2126*red($c1) + .7152*green($c1) + .0722*blue($c1))/255 <= .5 {
-		color: #FFF;
+		color: mix(#FFF,$c1,95%);
 	} @else {
-		color: #000;
+		color: mix(#000,$c1,70%);
 	}
-}
-
-// Prevent Long URL’s From Breaking Out of Container.
-// http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container
-
-%word-break {
-	-ms-word-break: break-all;
-	word-break: break-all;
-
-	// Non standard for webkit
-	word-break: break-word;
-
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
 }
 
 // UI mixins.
 
-@mixin block($color, $top: 1.5, $right: 1, $bottom: 1.5, $left: 1){
-	background-color: $color;
-	padding: #{$alpha-line-height * 1em * $top} #{$grid-margin * $right * 1px} #{$alpha-line-height * 1em * $bottom} #{$grid-margin * $left * 1px};
+// Make a block with various properties
+// @include block-skin;
+@mixin block-skin($bgcolor: $gamma-ui-color, $fgcolor: $alpha-text-color, $block-radius: $radius, $block-border-width: $border-width, $block-border-style: $border-style) {
+
+	background-color: $bgcolor;
+	border-color: darken($bgcolor,100%-$contrast);
+	border-style: $border-style;
+
+	@if (su($block-radius) > 0) {
+		border-radius: $block-radius;
+	}
+
+	@if (su($block-border-width) > 0) {
+		border-width: $block-border-width;
+	}
+
+	@include text-color($bgcolor);
+
 }
 
 // Cross browser background opacity.
-
 @mixin background-opacity($color, $alpha) {
 	$rgba: rgba($color, $alpha);
 	$ie-hex-str: ie-hex-str($rgba);
@@ -125,8 +103,8 @@
 
 @mixin border-box {
 	-webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 // Progressive svg backgrounds with png fallback.
@@ -136,15 +114,25 @@
 @mixin mdrn-svg { .svg & { @content } }
 
 @mixin svg-bg($filename, $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat, $size: auto) {
-    background: $bg-color url($filename + $extension) $position $repeat;
-    background-size: $size;
-    @include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; background-size: $size; }
+	background: $bg-color url($filename + $extension) $position $repeat;
+	background-size: $size;
+	@include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; background-size: $size; }
 }
 
 // Media query mixin.
 // @include mq(#point, #query1, #query2);
 @mixin mq($point, $query1: min, $query2: width) {
-	@media screen and (#{$query1}-#{$query2}: $point) {
+	@media (#{$query1}-#{$query2}: $point) {
 		@content;
 	}
+}
+
+// Vertically center any object within its container. Works in IE9 and up.
+// @include vertical-center;
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }

@@ -2,7 +2,15 @@
 // Chopstick settings
 //
 
+// Debug
+
+$debug-mode: false;
+
 // Typography
+
+$show-baseline-grid: false; // toggle the visibility of the baseline (true/false)
+$baseline-holder: holder; // set the classname of the element which will show the baseline
+$grid-color: rgba(#000,0.1); // set the baseline grid color and opacity
 
 $alpha-font-family	: sans-serif;
 $alpha-font-size	: 16; // pixel-value
@@ -38,10 +46,30 @@ $importantnumber	: 44;
 $leading			: 1;
 $base-size			: $alpha-font-size/16*1em;
 
+// manual modular scale font sizes
+// based on http://modularscale.com/scale/?px1=16&px2=18&ra1=1.333&ra2=0
+
+$ms-2 				: 12;
+$ms-1 				: 14;
+$ms1 			 	: 18;
+$ms2 			 	: 21;
+$ms3 			 	: 23;
+$ms4 			 	: 28;
+$ms5 			 	: 31;
+$ms6 			 	: 37;
+$ms7 			 	: 42;
+$ms8 			 	: 50;
+$ms10 			 	: 56;
+$ms11			 	: 67;
+$ms12			 	: 75;
+$ms13			 	: 89;
+$ms14			 	: 100;
+
 // UI
 
 $radius			: 5px;
-$border			: 1px;
+$border-width	: 1px;
+$border-style	: solid;
 $depth			: 0%; // Range: 0-100%
 $contrast		: 91%; // Range: 0-100%
 $shadow			: 21%; // Range: 0-100%
@@ -49,13 +77,17 @@ $highlight		: 0%; // Range: 0-100%
 
 // Colors
 
-$alpha-text-color 	: #444;
-$beta-text-color 	: #777;
+$alpha-text-color	: #444;
+$beta-text-color	: #777;
 
-$alpha-ui-color 	: #0A69E7; // Primary elements
+$alpha-ui-color		: #0A69E7; // Primary elements
 $beta-ui-color		: #CCC; // Secondary elements
-$gamma-ui-color 	: #DDD; // Used for borders
-$delta-ui-color 	: #FFF; // Used for backgrounds
+$gamma-ui-color		: #DDD; // Used for borders
+$delta-ui-color		: #FFF; // Used for backgrounds
+
+$error-color 		: red;
+$success-color 		: green;
+$notice-color 		: yellow;
 
 $error-color 		: #d00c00;
 $success-color 		: #72aa2e;
