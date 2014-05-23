@@ -43,7 +43,7 @@
 	<![endif]-->
 
 	{* Custom modernizr build: http://modernizr.com *}
-	<script src="{$THEME_URL}/core/js/modernizr.custom.js"></script>
+	<script src="{$THEME_URL}/Core/Js/modernizr.custom.js"></script>
 
 	{* Site wide HTML *}
 	{$siteHTMLHeader}

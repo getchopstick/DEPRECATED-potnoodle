@@ -1,4 +1,4 @@
-{include:core/layout/templates/head.tpl}
+{include:Core/Layout/Templates/Head.tpl}
 
 <body class="{$LANGUAGE}" itemscope itemtype="http://schema.org/WebPage">
 	<!--[if lt IE 8]>
@@ -8,12 +8,12 @@
 	<![endif]-->
 
 	{* Header *}
-	{include:core/layout/templates/header.tpl}
+	{include:Core/Layout/Templates/Header.tpl}
 
 	<main id="main" class="holder main-holder" role="main">
 		<div class="row">
 			<div class="main">
-				{include:core/layout/templates/breadcrumb.tpl}
+				{include:Core/Layout/Templates/Breadcrumb.tpl}
 
 				{* Page title *}
 				{option:!hideContentTitle}
@@ -38,7 +38,7 @@
 	</main>
 
 	{* Footer *}
-	{include:core/layout/templates/footer.tpl}
+	{include:Core/Layout/Templates/Footer.tpl}
 
 </body>
 </html>

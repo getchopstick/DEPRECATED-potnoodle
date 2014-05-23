@@ -34,7 +34,7 @@
 {/iteration:jsFiles}
 
 {* Theme specific Javascript *}
-<script src="{$THEME_URL}/core/js/theme.js"></script>
+<script src="{$THEME_URL}/Core/Js/theme.js"></script>
 
 {* Site wide HTML *}
 {$siteHTMLFooter}

@@ -3,10 +3,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "core/layout/css"
-sass_dir = "core/layout/scss"
-images_dir = "core/layout/img"
-javascripts_dir = "core/js"
+css_dir = "Core/Layout/Css"
+sass_dir = "Core/Layout/Scss"
+images_dir = "Core/Layout/img"
+javascripts_dir = "Core/Js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 output_style = :nested

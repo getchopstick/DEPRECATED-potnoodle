@@ -25,7 +25,7 @@
 			{* Languages *}
 			{option:languages}
 				<nav>
-					{include:core/layout/templates/languages.tpl}
+					{include:Core/Layout/Templates/Languages.tpl}
 				</nav>
 			{/option:languages}
 
