@@ -1,4 +1,4 @@
-<aside id="userActions">
+<aside>
 	{option:isLoggedIn}
 		<p>
 			<strong>{$msgWelcomeUserX|sprintf:{$profileDisplayName}}</strong>

@@ -24,6 +24,6 @@
 				</li>
 			{/iteration:items}
 		</ul>
-		{include:core/layout/templates/pagination.tpl}
+		{include:Core/Layout/Templates/Pagination.tpl}
 	{/option:items}
 </section>

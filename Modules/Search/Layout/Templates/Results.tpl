@@ -25,5 +25,5 @@
 			{/iteration:searchResults}
 		{/option:searchResults}
 	</section>
-	{include:core/layout/templates/pagination.tpl}
+	{include:Core/Layout/Templates/Pagination.tpl}
 {/option:searchTerm}
