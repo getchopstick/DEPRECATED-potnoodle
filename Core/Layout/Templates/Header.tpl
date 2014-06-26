@@ -30,7 +30,7 @@
 			{/option:languages}
 
 			{* Search widget: so you don't have to make a position *}
-			{$var|parsewidget:'search':'form'}
+			{$var|parsewidget:'Search':'Form'}
 
 		</div>
 	</div>
