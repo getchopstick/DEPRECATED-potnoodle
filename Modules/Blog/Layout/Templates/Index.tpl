@@ -31,5 +31,5 @@
 		{/iteration:items}
 	{/option:items}
 
-	{include:core/layout/templates/pagination.tpl}
+	{include:Core/Layout/Templates/Pagination.tpl}
 </section>
