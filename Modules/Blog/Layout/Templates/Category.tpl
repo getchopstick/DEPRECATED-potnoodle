@@ -24,7 +24,7 @@
 						{/option:items.allow_comments}
 					</p>
 				</header>
-				{option:items.image}<img src="{$FRONTEND_FILES_URL}/blog/images/128x128/{$items.image}" alt="{$items.title}" />{/option:items.image}
+				{option:items.image}<img src="{$FRONTEND_FILES_URL}/Blog/images/128x128/{$items.image}" alt="{$items.title}" />{/option:items.image}
 				{option:!items.introduction}{$items.text}{/option:!items.introduction}
 				{option:items.introduction}{$items.introduction}{/option:items.introduction}
 			</article>

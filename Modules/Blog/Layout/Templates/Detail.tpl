@@ -34,7 +34,7 @@ variables that are available:
 	</header>
 	<div itemprop="articlecontent">
 		{option:item.image}
-			<img src="{$FRONTEND_FILES_URL}/blog/images/128x128/{$item.image}" alt="{$item.title}" itemprop="image" />
+			<img src="{$FRONTEND_FILES_URL}/Blog/images/128x128/{$item.image}" alt="{$item.title}" itemprop="image" />
 		{/option:item.image}
 		{$item.text}
 	</div>
