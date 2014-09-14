@@ -57,7 +57,7 @@
 		<fieldset>
 			<legend>{$lblYourAvatar|ucfirst}</legend>
 			{option:avatar}
-				<img src="{$FRONTEND_FILES_URL}/Profiles/Avatars/240x240/{$avatar}" />
+				<img src="{$FRONTEND_FILES_URL}/Profiles/avatars/240x240/{$avatar}" />
 			{/option:avatar}
 
 			<p{option:fileAvatarError} class="errorArea"{/option:fileAvatarError}>

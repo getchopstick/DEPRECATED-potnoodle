@@ -19,7 +19,7 @@
 	</authors>
 	<metanavigation supported="false" />
 	<templates>
-		<template label="Default" path="core/layout/templates/default.tpl">
+		<template label="Default" path="Core/Layout/Templates/Default.tpl">
 			<positions>
 				<position name="main" />
 			</positions>

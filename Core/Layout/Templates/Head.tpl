@@ -39,7 +39,7 @@
 	{* HTML5 shim and Respond.js: "IE8 and below" support of HTML5 elements and media queries *}
 	<!--[if lt IE 9  & (!IEMobile)]
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<script src="{$THEME_URL}/core/js/respond.min.js"></script>
+		<script src="{$THEME_URL}/Core/Js/respond.min.js"></script>
 	<![endif]-->
 
 	{* Custom modernizr build: http://modernizr.com *}
