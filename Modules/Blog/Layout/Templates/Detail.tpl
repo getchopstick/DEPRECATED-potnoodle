@@ -34,7 +34,7 @@ variables that are available:
 	</header>
 	<div itemprop="articlecontent">
 		{option:item.image}
-			<img src="{$FRONTEND_FILES_URL}/Blog/images/128x128/{$item.image}" alt="{$item.title}" itemprop="image" />
+			<img src="{$FRONTEND_FILES_URL}/blog/images/128x128/{$item.image}" alt="{$item.title}" itemprop="image" />
 		{/option:item.image}
 		{$item.text}
 	</div>
@@ -71,7 +71,7 @@ variables that are available:
 				<article id="comment-{$comments.id}" itemprop="comment" itemscope itemtype="http://schema.org/UserComments">
 					<meta itemprop="discusses" content="{$item.title}" />
 					{option:comments.website}<a href="{$comments.website}">{/option:comments.website}
-						<img src="{$FRONTEND_CORE_URL}/layout/images/default_author_avatar.gif" width="48" height="48" alt="{$comments.author}" class="replaceWithGravatar" data-gravatar-id="{$comments.gravatar_id}" />
+						<img src="{$FRONTEND_CORE_URL}/Layout/images/default_author_avatar.gif" width="48" height="48" alt="{$comments.author}" class="replaceWithGravatar" data-gravatar-id="{$comments.gravatar_id}" />
 					{option:comments.website}</a>{/option:comments.website}
 					<p itemscope itemtype="http://schema.org/Person">
 						{option:comments.website}<a href="{$comments.website}" itemprop="url">{/option:comments.website}
