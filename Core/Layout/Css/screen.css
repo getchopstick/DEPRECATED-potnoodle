@@ -334,7 +334,9 @@ td:before { content: attr(headers) ": "; font-weight: bold; width: 50%; display:
 */
 .c-holder { padding-top: 16px; padding-top: 1rem; padding-bottom: 16px; padding-bottom: 1rem; padding-left: 16px; padding-right: 16px; }
 
-.c-holder--alpha { background-color: #fff; }
+.c-holder--alpha { background-color: #fff; *zoom: 1; }
+.c-holder--alpha:before, .c-holder--alpha:after { display: table; content: ""; }
+.c-holder--alpha:after { clear: both; }
 
 .c-holder--beta { color: #c3c3c3; background-color: #222222; }
 

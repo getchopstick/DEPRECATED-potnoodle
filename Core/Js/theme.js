@@ -1,59 +1,40 @@
-var jsTheme =
+var chopstick =
 {
-	// init, something like a constructor
-	init: function()
-	{
-		jsTheme.mobileNav.init();
-		jsTheme.forms.init();
-		console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
-	}
+    // init, something like a constructor
+    init: function()
+    {
+        chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
+        chopstick.loadObject(chopstick.alerts, 'chopstick.alerts');
+        chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
 
-};
+        console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
+    },
 
-jsTheme.mobileNav =
-{
-	init: function()
-	{
-		jsTheme.mobileNav.enableMobileNav();
-		jsTheme.mobileNav.buildMobileNav();
-	},
+    /**
+     * This function will load an object by a given name
+     *
+     * If the object doesn't exist no error will be thrown
+     * But if object exists but doesn't have an init method it will throw an error
+     *
+     * If everything is ok we'll initiate the given object
+     */
+    loadObject: function(obj, name)
+    {
+        // create object based on a name
+        // var objName = window[objName];
 
-	// CSS is based on the class .mobile-nav
-	//
-	enableMobileNav: function()
-	{
-		$("html").addClass("mobile-nav");
-	},
+        // check if object exists
+        if(typeof obj != 'undefined') {
 
-	// build mobile nav
-	buildMobileNav: function()
-	{
-		var navHolder = $('.header .inner');
+            // check if object has a method init
+            if (typeof obj.init == 'undefined') {
+                // we will throw an error so the designer / developer know there's a problem
+                throw new Error('ERROR: "' + name + '" does not have an init function');
 
-		navHolder.prepend('<span class="main-nav-trigger">menu</span>');
-
-		var trigger = $('.main-nav-trigger');
-		var nav = $('.main-nav');
-
-		trigger.on('click', function() {
-			nav.toggle();
-			$(this).toggleClass("trigger-active");
-		});
-	}
-
-};
-
-jsTheme.forms =
-{
-	init: function()
-	{
-		$('.alert-box').on('click', function(e)
-		{
-			e.preventDefault();
-			$(this).closest('.alert-box').fadeOut(300);
-		});
-	}
-
-};
-
-$(jsTheme.init);
+            } else {
+                // everything is fine so initiate
+                obj.init();
+            }
+        }
+    }
+ };
