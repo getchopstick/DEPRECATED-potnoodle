@@ -1,0 +1,25 @@
+{
+  "name": "chopstick-settings",
+  "description": "Chopstick settings layer",
+  "keywords": [
+    "front-end",
+    "settings",
+    "css",
+    "scss",
+    "framework",
+    "ITCSS"
+  ],
+  "authors": [
+    "Wijs <info@wijs.be> (http://wijs.be)"
+  ],
+  "homepage": [
+    "http://getchopstick.com/"
+  ],
+  "licence": "MIT",
+  "ignore": [
+    ".git",
+    ".editorconfig",
+    ".npmignore",
+    "package.json"
+  ]
+}

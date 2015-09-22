@@ -4,7 +4,7 @@ var chopstick =
     init: function()
     {
         chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
-        chopstick.loadObject(chopstick.alerts, 'chopstick.alerts');
+        chopstick.loadObject(chopstick.hide, 'chopstick.hide');
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
 
         console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
@@ -37,91 +37,98 @@ var chopstick =
             }
         }
     }
- };
+};
 
-chopstick.alerts =
+var hideSettings
+chopstick.hide =
 {
     settings:
     {
-        alertbox: $('.js-hide-alert')
+        hide: $('.js-hide')
     },
 
     init: function()
     {
-        settings = this.settings;
-        chopstick.alerts.closeAlertBox();
+        hideSettings = chopstick.hide.settings;
+        chopstick.hide.hideContent();
     },
 
-    closeAlertBox: function ()
+    hideContent: function ()
     {
-        settings.alertbox.on('click', function(e)
+        hideSettings.hide.on('click', function(e)
         {
             e.preventDefault();
-            $(this).closest(settings.alertbox).fadeOut(300);
+            $(this).closest(hideSettings.hide).parent().addClass('is-hidden');
         });
     }
 };
 
+var mobileNavSettings
 chopstick.mobileNav =
 {
     settings:
     {
-        navHolder: $('.js-nav-holder'),
-        trigger: $('.js-nav-trigger'),
+        navigation: $('.js-nav'),
+        trigger: $('.js-nav-trigger')
     },
 
     init: function()
     {
-        settings = this.settings;
-
-        chopstick.mobileNav.enableMobileNav();
-        chopstick.mobileNav.buildMobileNav();
+        // Initialize mobile nav settings
+        mobileNavSettings = chopstick.mobileNav.settings;
+        // Bind toggle events
+        chopstick.mobileNav.bindUIEvents();
     },
 
-    enableMobileNav: function()
+    bindUIEvents: function()
     {
-        $("html").addClass("c-mobile-nav");
+        mobileNavSettings.trigger.on('click', function() {
+            chopstick.mobileNav.toggleNavigation();
+        });
     },
 
     // build mobile nav
-    buildMobileNav: function()
+    toggleNavigation: function()
     {
-        settings.trigger.on('click', function() {
-            $('.js-nav').toggle();
-            $(this).toggleClass("is-active");
-        });
+        mobileNavSettings.navigation.toggleClass('is-visible');
+        mobileNavSettings.trigger.toggleClass('is-active');
     }
 };
 
+var toggleSettings
 chopstick.toggle =
 {
-    init: function() {
-        // The toggle is called with the '.js-toggle' class and one or more data-targets
-        // Use the 'is-hidden' class to hide your elements"
-        var toggle = $('.js-toggle');
+    settings:
+    {
+        showHideToggle: $('.js-show-hide')
+    },
 
-        // Toggle functionality
-        toggle.on('touchstart click', function(e){
-            // Prevent the default action on links
-            e.preventDefault();
+    init: function()
+    {
+        // Initialize toggle settings
+        toggleSettings = chopstick.toggle.settings;
+        // Bind toggle events
+        chopstick.toggle.bindUIEvents();
+    },
 
-            // Split the targets if multiple
-            var targets = $(this).data("target").replace(" ", "").split(",");
-
-            // Loop trough targets and toggle the 'is-hidden' class
-            for (var i = targets.length - 1; i >= 0; i--) {
-                if(targets[i]){
-                    // Toggle the 'is-hidden' class
-                    $(targets[i]).toggleClass('is-hidden');
-                }
+    bindUIEvents: function()
+    {
+        // Bind show hide event
+        toggleSettings.showHideToggle.on('touchstart click', function(e){
+            var trigger = $(this);
+            // Check if action needs to be prevented
+            if (trigger.data("action") == "none") {
+                e.preventDefault();
             }
-
-            // Add an 'is-toggled' class to the trigger.
-            // Use this class to style your icons, active states, etc.
-            $(this).toggleClass('is-toggled');
-
-            return false;
+            chopstick.toggle.showHide(trigger.data("target-selector"));
+            trigger.toggleClass('is-toggled');
         });
+    },
+
+    showHide: function(targets)
+    {
+        //  Toggle the 'is-hidden' class
+        $(targets).toggleClass('is-hidden');
     }
 };
 

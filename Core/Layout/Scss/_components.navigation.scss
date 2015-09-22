@@ -1,0 +1,85 @@
+/*
+    Components: Navigation
+    ---
+    Site navigation, breadcrumbs, etc.
+*/
+
+.c-nav-main {
+    width: 100%;
+    float: left;
+    display: none;
+    font-family: $alpha-font-family;
+
+    @include mq(bp3) {
+        display: block;
+        width: auto;
+        float: right;
+    }
+
+    &.is-visible {
+        display: block;
+    }
+}
+
+    .c-nav-main__list {
+        border-top: 1px dotted palette(color-neutral,light);
+
+        @include mq(bp3) {
+            border-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .c-nav-main__item {
+        & + & {
+            border-top: 1px dotted palette(color-neutral,light);
+        }
+
+        @include mq(bp3) {
+            float: left;
+
+            & + & {
+                border-top: 0;
+                @include margin-lr(2,0);
+            }
+        }
+    }
+
+    .c-nav-main__link {
+        display: block;
+        color: palette(color-alpha);
+        text-decoration: none;
+        font-weight: $beta-font-weight;
+        @include text-dimensions($alpha-font-size,1,0,.25,.25);
+
+        @include mq(bp3) {
+            @include padding-tb(1.25,1.25);
+        }
+
+        &:hover,
+        .is-selected & {
+            color: palette(color-alpha,dark);
+        }
+    }
+
+.c-nav-main-trigger {
+    user-select: none;
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    display: block;
+    color: palette(color-alpha);
+    background-color: palette(color-neutral,x-light);
+    border: 1px solid palette(color-alpha);
+    outline: 0;
+    border-radius: $radius;
+
+    &.is-active {
+        color: palette(color-neutral,x-light);
+        background-color: palette(color-alpha);
+    }
+
+    @include mq(bp3) {
+        display: none;
+    }
+}

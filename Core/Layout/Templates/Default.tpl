@@ -1,42 +1,64 @@
+<!DOCTYPE html>
+<html lang="{$LANGUAGE}">
+
 {include:Core/Layout/Templates/Head.tpl}
 
 <body class="{$LANGUAGE}" itemscope itemtype="http://schema.org/WebPage">
-<!--[if lt IE 8]>
-<div class="alert-box">
-<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser to improve your experience.</p>
-</div>
-<![endif]-->
 
-{* Header *}
-{include:Core/Layout/Templates/Header.tpl}
+    {* Browser-alert *}
+    {include:Core/Layout/Templates/Browser-alert.tpl}
 
-<main class="c-holder c-holder--alpha" role="main">
-	<div class="o-container">
-		{include:Core/Layout/Templates/Breadcrumb.tpl}
+    {* Header *}
+    {include:Core/Layout/Templates/Header.tpl}
 
-		{* Page title *}
-		{option:!hideContentTitle}
-		<header>
-			<h1>{$page.title}</h1>
-		</header>
-		{/option:!hideContentTitle}
+    <div class="c-row c-row--alpha">
+        <div class="o-container">
+            <main class="o-grid o-grid--gutter">
 
-		{* Main position *}
-		{option:positionMain}
-		{iteration:positionMain}
-		{option:!positionMain.blockIsHTML}
-		{$positionMain.blockContent}
-		{/option:!positionMain.blockIsHTML}
-		{option:positionMain.blockIsHTML}
-		{$positionMain.blockContent}
-		{/option:positionMain.blockIsHTML}
-		{/iteration:positionMain}
-		{/option:positionMain}
-	</div>
-</main>
+                {* Breadcrumb *}
+                {option:!isPage1}
+                <div class="o-grid__item">
+                    {include:Core/Layout/Templates/Breadcrumb.tpl}
+                </div>
+                {/option:!isPage1}
 
-{* Footer *}
-{include:Core/Layout/Templates/Footer.tpl}
+
+                {* Page title *}
+                {option:!hideContentTitle}
+                <div class="o-grid__item">
+                    <h1>{$page.title}</h1>
+                </div>
+                {/option:!hideContentTitle}
+
+
+                {* Main position *}
+                <div class="o-grid__item">
+                    {option:positionMain}
+                    {iteration:positionMain}
+
+                    {option:!positionMain.blockIsHTML}
+                        {$positionMain.blockContent}
+                    {/option:!positionMain.blockIsHTML}
+
+                    {option:positionMain.blockIsHTML}
+                        {$positionMain.blockContent}
+                    {/option:positionMain.blockIsHTML}
+
+                    {/iteration:positionMain}
+                </div>
+                {/option:positionMain}
+            </main>
+        </div>
+    </div>
+
+    {* Footer *}
+    {include:Core/Layout/Templates/Footer.tpl}
+
+    {* Javascript *}
+    {include:Core/Layout/Templates/Javascript.tpl}
+
+    {* Site wide HTML *}
+    {$siteHTMLFooter}
 
 </body>
 </html>

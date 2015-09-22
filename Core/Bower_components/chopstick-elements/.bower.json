@@ -1,0 +1,39 @@
+{
+  "name": "chopstick-elements",
+  "description": "Chopstick elements layer",
+  "dependencies": {
+    "chopstick-settings": "0.7.1",
+    "chopstick-tools": "0.7.1"
+  },
+  "keywords": [
+    "front-end",
+    "elements",
+    "css",
+    "scss",
+    "framework",
+    "ITCSS"
+  ],
+  "authors": [
+    "Wijs <info@wijs.be> (http://wijs.be)"
+  ],
+  "homepage": [
+    "http://getchopstick.com/"
+  ],
+  "licence": "MIT",
+  "ignore": [
+    ".git",
+    ".editorconfig",
+    ".npmignore",
+    "package.json"
+  ],
+  "version": "0.7.1",
+  "_release": "0.7.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.7.1",
+    "commit": "2636412f3971857f8a50e91f57a4332fd0cb2a20"
+  },
+  "_source": "git://github.com/getchopstick/chopstick-elements.git",
+  "_target": "~0.7.1",
+  "_originalSource": "chopstick-elements"
+}

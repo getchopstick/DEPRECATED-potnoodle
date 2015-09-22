@@ -1,24 +1,35 @@
 /*
-    Component: pagination
+    Components: Pagination
     ---
-    Pagination
+    Default pagination with a centered option.
 */
 
 .c-pagination {
-    a,
-    span {
-        padding: 0 10px;
-        border: 1px solid $gamma-ui-color;
-        margin-left: -1px;
-    }
-
-    span {
-        color: $beta-text-color;
-    }
-
-    @include pagination;
+    @include clearfix;
 }
 
-    .c-pagination--centered {
-        @include pagination-centered;
+.c-pagination--centered {
+    position: relative;
+    left: 50%;
+    float: left;
+}
+
+    .c-pagination__list {
+        float: left;
+
+        .c-pagination--centered > & {
+            margin-left: -50%;
+        }
+    }
+
+    .c-pagination__item {
+        & + & {
+            border-left: 1px dotted palette(color-neutral);
+        }
+    }
+
+    .c-pagination__link {
+        display: block;
+        @include padding-lr(.3,.3);
+        @include padding-tb(.3,.3);
     }

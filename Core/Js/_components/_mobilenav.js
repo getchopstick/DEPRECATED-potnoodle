@@ -1,30 +1,31 @@
+var mobileNavSettings
 chopstick.mobileNav =
 {
     settings:
     {
-        navHolder: $('.js-nav-holder'),
-        trigger: $('.js-nav-trigger'),
+        navigation: $('.js-nav'),
+        trigger: $('.js-nav-trigger')
     },
 
     init: function()
     {
-        settings = this.settings;
-
-        chopstick.mobileNav.enableMobileNav();
-        chopstick.mobileNav.buildMobileNav();
+        // Initialize mobile nav settings
+        mobileNavSettings = chopstick.mobileNav.settings;
+        // Bind toggle events
+        chopstick.mobileNav.bindUIEvents();
     },
 
-    enableMobileNav: function()
+    bindUIEvents: function()
     {
-        $("html").addClass("c-mobile-nav");
+        mobileNavSettings.trigger.on('click', function() {
+            chopstick.mobileNav.toggleNavigation();
+        });
     },
 
     // build mobile nav
-    buildMobileNav: function()
+    toggleNavigation: function()
     {
-        settings.trigger.on('click', function() {
-            $('.js-nav').toggle();
-            $(this).toggleClass("is-active");
-        });
+        mobileNavSettings.navigation.toggleClass('is-visible');
+        mobileNavSettings.trigger.toggleClass('is-active');
     }
 };
